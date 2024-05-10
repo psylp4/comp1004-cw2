@@ -1,6 +1,6 @@
 // Initialize Supabase client
 const supabaseUrl = 'https://dezdfpmeuwlffovlxhdz.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRlemRmcG1ldXdsZmZvdmx4aGR6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUyOTg1MTMsImV4cCI6MjAzMDg3NDUxM30._yZHPPYwm0ScxEvFNRjQ4SdAjHx9ZyZZKCM0qbtT9Bk';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRlemRmcG1ldXdsZmZvdmx4aGR6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcxNTI5ODUxMywiZXhwIjoyMDMwODc0NTEzfQ.emzY0cdWbYkGA2KU5G8jHe0fb0ePEEePB5Ejps52r-E'
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Function to handle form submission for querying people
