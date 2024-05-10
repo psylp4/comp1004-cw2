@@ -1,5 +1,7 @@
 // Initialize Supabase client
-const supabase = createSupabaseClient();
+const supabaseUrl = 'https://dezdfpmeuwlffovlxhdz.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRlemRmcG1ldXdsZmZvdmx4aGR6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUyOTg1MTMsImV4cCI6MjAzMDg3NDUxM30._yZHPPYwm0ScxEvFNRjQ4SdAjHx9ZyZZKCM0qbtT9Bk';
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Function to handle form submission for querying vehicles
 document.getElementById("queryVehiclesForm").addEventListener("submit", async function(event) {
