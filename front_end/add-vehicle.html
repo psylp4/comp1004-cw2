@@ -3,20 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Vehicle</title>
+    <title>Add a Vehicle</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>&emsp; Add Vehicle</h1>
+        <h1>Add a Vehicle</h1>
         <nav>
             <ul>
-                <li><a href="search-people.html">Search People</a>&emsp;<a href="search-vehicles.html">Search Vehicles</a>&emsp;<a href="add-vehicle.html">Add Vehicle</a></li>
+                <li><a href="search-people.html">People search</a>&emsp;<a href="search-vehicles.html">Vehicle search</a>&emsp;<a href="add-vehicle.html">Add a vehicle</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <!-- Add Vehicle Form -->
+        <form id="add-vehicle-form">
+            <label for="rego">Registration Number:</label>
+            <input type="text" id="rego" name="rego">
+            <label for="make">Make:</label>
+            <input type="text" id="make" name="make">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model">
+            <label for="colour">Colour:</label>
+            <input type="text" id="colour" name="colour">
+            <label for="owner">Owner:</label>
+            <input type="text" id="owner" name="owner">
+            <button type="submit">Add</button>
+        </form>
+        <!-- Owner Details Form (if owner doesn't exist) -->
+        <form id="add-owner-form" style="display: none;">
+            <label for="personid">Person ID:</label>
+            <input type="text" id="personid" name="personid" readonly>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob">
+            <label for="license">License Number:</label>
+            <input type="text" id="license" name="license">
+            <label for="expire">License Expiry Date:</label>
+            <input type="text" id="expire" name="expire">
+            <button type="submit">Add owner</button>
+        </form>
+        <div id="message"></div>
     </main>
     <aside>
         <img src="add-vehicle.jpg" alt="Add Vehicle Image">
@@ -25,5 +55,6 @@
     <footer>
         <p>&copy; psylp4_comp1004_cw2</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

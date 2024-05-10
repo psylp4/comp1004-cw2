@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Vehicles</title>
+    <title>Vehicle Search</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>&emsp; Search Vehicles</h1>
+        <h1>Vehicle Search</h1>
         <nav>
             <ul>
-                <li><a href="search-people.html">Search People</a>&emsp;<a href="search-vehicles.html">Search Vehicles</a>&emsp;<a href="add-vehicle.html">Add Vehicle</a></li>
+                <li><a href="search-people.html">People search</a>&emsp;<a href="search-vehicles.html">Vehicle search</a>&emsp;<a href="add-vehicle.html">Add a vehicle</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <!-- Search Vehicles Form -->
+        <form id="search-vehicles-form">
+            <label for="rego">Registration Number:</label>
+            <input type="text" id="rego" name="rego">
+            <button type="submit">Submit</button>
+        </form>
+        <div id="results"></div>
     </main>
     <aside>
         <img src="vehicles.jpg" alt="Vehicles Image">
@@ -25,5 +31,6 @@
     <footer>
         <p>&copy; psylp4_comp1004_cw2</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
