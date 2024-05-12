@@ -10,13 +10,21 @@
     <header>
         <h1>&emsp; People Search</h1>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="search-people.html">People search</a>&emsp;<a href="search-vehicles.html">Vehicle search</a>&emsp;<a href="add-vehicle.html">Add a vehicle</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="container">
         <!-- Search People Form -->
+        <form id="searchPeopleForm">
+            <label for="name">Driver Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="license">License Number:</label>
+            <input type="text" id="license" name="license">
+            <button type="submit">Submit</button>
+        </form>
+        <div id="results"></div>
     </main>
     <aside>
         <img src="people.jpg">

@@ -10,13 +10,45 @@
     <header>
         <h1>&emsp; Add a Vehicle</h1>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="search-people.html">People search</a>&emsp;<a href="search-vehicles.html">Vehicle search</a>&emsp;<a href="add-vehicle.html">Add a vehicle</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="container">
         <!-- Add Vehicle Form -->
+        <form id="addVehicleForm">
+            <label for="rego">Vehicle Registration:</label>
+            <input type="text" id="rego" name="rego">
+            <label for="make">Make:</label>
+            <input type="text" id="make" name="make">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model">
+            <label for="colour">Colour:</label>
+            <input type="text" id="colour" name="colour">
+            <label for="owner">Owner:</label>
+            <input type="text" id="owner" name="owner">
+            <button type="submit">Add</button>
+        </form>
+        <div id="ownerForm" style="display: none;">
+            <!-- Add Owner Form -->
+            <form id="addOwnerForm">
+                <label for="personid">Person ID:</label>
+                <input type="text" id="personid" name="personid">
+                <label for="name">Owner Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="address">Owner Address:</label>
+                <input type="text" id="address" name="address">
+                <label for="dob">Owner Date of Birth:</label>
+                <input type="text" id="dob" name="dob">
+                <label for="license">Owner License Number:</label>
+                <input type="text" id="license" name="license">
+                <label for="expire">Owner License Expiry Date:</label>
+                <input type="text" id="expire" name="expire">
+                <button type="submit">Add owner</button>
+            </form>
+        </div>
+        <div id="message"></div>
     </main>
     <aside>
         <img src="add-vehicle.jpg">

@@ -10,13 +10,19 @@
     <header>
         <h1>&emsp; Vehicle Search</h1>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="search-people.html">People search</a>&emsp;<a href="search-vehicles.html">Vehicle search</a>&emsp;<a href="add-vehicle.html">Add a vehicle</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="container">
         <!-- Search Vehicles Form -->
+        <form id="searchVehiclesForm">
+            <label for="rego">Vehicle Registration:</label>
+            <input type="text" id="rego" name="rego">
+            <button type="submit">Submit</button>
+        </form>
+        <div id="results"></div>
     </main>
     <aside>
         <img src="vehicles.jpg">
