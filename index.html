@@ -6,7 +6,7 @@
     <title>People Search</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="container">
     <header>
         <h1>&emsp; People Search</h1>
         <nav>
@@ -34,5 +34,38 @@
         <p>&copy; psylp4_comp1004_cw2</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // Function to handle form submission for people search
+        document.getElementById('people-search-form').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        const name = document.getElementById('name').value.trim(); // Get name input value
+        const license = document.getElementById('license').value.trim(); // Get license number input value
+        
+        // Call function to search for people based on name or license number
+        const results = await searchPeople(name, license);
+        
+        // Display search results
+        displaySearchResults(results);
+    });
+
+    // Function to display search results for people
+    function displaySearchResults(results) {
+        const resultsContainer = document.getElementById('results');
+        resultsContainer.innerHTML = ''; // Clear previous results
+        
+        if (results.length === 0) {
+            resultsContainer.innerHTML = '<p>No results found.</p>';
+        } else {
+            const ul = document.createElement('ul');
+            results.forEach(person => {
+                const li = document.createElement('li');
+                li.textContent = `${person.Name}, ${person.Address}, DOB: ${person.DOB}, License: ${person.LicenseNumber}`;
+                ul.appendChild(li);
+            });
+            resultsContainer.appendChild(ul);
+        }
+    }
+    </script>
 </body>
 </html>

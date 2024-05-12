@@ -6,7 +6,7 @@
     <title>Add a Vehicle</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="container">
     <header>
         <h1>&emsp; Add a Vehicle</h1>
         <nav>
@@ -67,5 +67,34 @@
         <p>&copy; psylp4_comp1004_cw2</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        document.getElementById('add-vehicle-form').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        const rego = document.getElementById('rego').value.trim(); // Get registration number input value
+        const make = document.getElementById('make').value.trim(); // Get make input value
+        const model = document.getElementById('model').value.trim(); // Get model input value
+        const colour = document.getElementById('colour').value.trim(); // Get colour input value
+        const ownerID = document.getElementById('owner').value.trim(); // Get owner ID input value
+        
+        // Call function to add new vehicle details
+        const success = await addVehicle(rego, make, model, colour, ownerID);
+        
+        // Display success or error message
+        displayMessage(success);
+    });
+
+    // Function to display success or error message
+    function displayMessage(success) {
+        const messageContainer = document.getElementById('message');
+        messageContainer.innerHTML = ''; // Clear previous message
+        
+        if (success) {
+            messageContainer.innerHTML = '<p>Vehicle added successfully!</p>';
+        } else {
+            messageContainer.innerHTML = '<p>Error adding vehicle. Please try again.</p>';
+        }
+    }
+    </script>
 </body>
 </html>
