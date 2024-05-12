@@ -31,32 +31,5 @@
         <p>&copy; psylp4_comp1004_cw2</p>
     </footer>
     <script src="script.js"></script>
-    <script>
-        // Function to handle form submission for vehicle search
-    document.getElementById('vehicle-search-form').addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevent default form submission
-        
-        const rego = document.getElementById('rego').value.trim(); // Get registration number input value
-        
-        // Call function to search for vehicle details by registration number
-        const result = await searchVehicle(rego);
-        
-        // Display search result
-        displaySearchResult(result);
-    });
-
-    // Function to display search result for vehicle
-    function displaySearchResult(result) {
-        const resultContainer = document.getElementById('results');
-        resultContainer.innerHTML = ''; // Clear previous result
-        
-        if (!result) {
-            resultContainer.innerHTML = '<p>No results found.</p>';
-        } else {
-            const { Make, Model, Colour, OwnerID } = result;
-            resultContainer.innerHTML = `<p>Make: ${Make}, Model: ${Model}, Colour: ${Colour}, OwnerID: ${OwnerID}</p>`;
-        }
-    }
-    </script>
 </body>
 </html>
