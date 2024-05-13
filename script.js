@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        performSearch('Person', { Name: name, LicenseNumber: license });
+        performSearch('People', { Name: name, LicenseNumber: license });
     }
 
     async function vehicleSearch(e) {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const license = document.getElementById('license').value.trim();
         const expire = document.getElementById('expire').value.trim();
 
-        const { error, data } = await supabase.from('Person').insert([{ PersonID: personId, Name: name, Address: address, DOB: dob, LicenseNumber: license, ExpiryDate: expire }], { upsert: true });
+        const { error, data } = await supabase.from('People').insert([{ PersonID: personId, Name: name, Address: address, DOB: dob, LicenseNumber: license, ExpiryDate: expire }], { upsert: true });
         if (error) {
             updateMessage('Error adding owner: ' + error.message);
         } else {
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function getOwnerId(name) {
-        const { data, error } = await supabase.from('Person').select('PersonID').ilike('Name', `%${name}%`).single();
+        const { data, error } = await supabase.from('People').select('PersonID').ilike('Name', `%${name}%`).single();
         if (error && !data) {
             return null;
         }
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (isSearch && data.length) {
             const outputList = data.map(item => {
-                if (table === 'Person') {
+                if (table === 'People') {
                     return `<div class="result-box">
                         <p><strong>ID:</strong> ${item.PersonID}</p>
                         <p><strong>Name:</strong> ${item.Name}</p>
