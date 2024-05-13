@@ -117,6 +117,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateMessage(message, isSearch = false, table = '', data = []) {
         const msg = document.getElementById('message');
         const results = document.getElementById('results');
+
+	if (!msg) {
+        	console.error("Element with id 'message' not found in the document.");
+        	return;
+    	}
+
         msg.textContent = message;
         results.innerHTML = '';
 
@@ -142,8 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }).join('');
             results.innerHTML = outputList;
-        } else {
-            results.innerHTML = '';
         }
     }
 });
