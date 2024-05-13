@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function peopleSearch(e) {
         e.preventDefault();
+	console.log('form submitted');
 
         const name = document.getElementById('name').value.trim();
         const license = document.getElementById('license').value.trim();
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function vehicleSearch(e) {
         e.preventDefault();
+	console.log('form submitted');
 
         const rego = document.getElementById('rego').value.trim();
 
@@ -41,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function addVehicle(e) {
         e.preventDefault();
+	console.log('form submitted');
+
         const ownerName = document.getElementById('owner').value.trim();
         const ownerId = await getOwnerId(ownerName);
         const rego = document.getElementById('rego').value.trim();
@@ -61,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function addOwner(e) {
         e.preventDefault();
+	console.log('form submitted');
 
         const personId = document.getElementById('personid').value.trim();
         const name = document.getElementById('name').value.trim();
@@ -118,6 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateMessage(message, isSearch = false, table = '', data = []) {
+	console.log('Updating message:', message, isSearch, table, data);
+
         const msg = document.getElementById('message');
         const results = document.getElementById('results');
         msg.textContent = message;
