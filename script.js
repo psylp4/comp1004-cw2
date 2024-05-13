@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function peopleSearch(e) {
         e.preventDefault();
-
         const name = document.getElementById('name').value.trim();
         const license = document.getElementById('license').value.trim();
 
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function vehicleSearch(e) {
         e.preventDefault();
-
         const rego = document.getElementById('rego').value.trim();
 
         if (!rego) {
@@ -41,9 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function addVehicle(e) {
         e.preventDefault();
-
-	console.log('form submitted');
-
         const ownerName = document.getElementById('owner').value.trim();
         const ownerId = await getOwnerId(ownerName);
         const rego = document.getElementById('rego').value.trim();
@@ -64,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function addOwner(e) {
         e.preventDefault();
-
         const personId = document.getElementById('personid').value.trim();
         const name = document.getElementById('name').value.trim();
         const address = document.getElementById('address').value.trim();
