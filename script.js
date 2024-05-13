@@ -117,8 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateMessage(message, isSearch = false, table = '', data = []) {
         const msg = document.getElementById('message');
         const results = document.getElementById('results');
-	console.log('msg:', msg);
-	console.log('results:', results);
         msg.textContent = message;
         results.innerHTML = '';
 
