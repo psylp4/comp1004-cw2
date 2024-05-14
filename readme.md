@@ -14,3 +14,8 @@
 
 ### Javascript
 - [script](script.js)
+
+<div align="center>
+  <h6>Accessibility Test</h6>
+  <img src="../img/lighthouse.png">
+</div>
