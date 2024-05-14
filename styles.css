@@ -77,3 +77,8 @@ footer {
   width: 300px; /* Adjust width as needed */
   box-sizing: border-box; /* Include border and padding in width calculation */
 }
+
+/* Ensure the add owner form is displayed */
+#add-owner-form {
+  display: block;
+}

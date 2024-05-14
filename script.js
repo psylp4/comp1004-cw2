@@ -49,11 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
     	if (ownerId) {
         	await insertVehicle(ownerId, rego, make, model, colour);
     	} else {
-        	document.getElementById('add-owner-form').style.display = 'block'; // Display add owner form
+        	const addOwnerForm = document.getElementById('add-owner-form');
+        	addOwnerForm.style.display = 'block'; // Display add owner form
+        	addOwnerForm.reset(); // Reset form fields
         	updateMessage('Owner does not exist. Please add the owner.');
         	sessionStorage.setItem('vehicleDetails', JSON.stringify({ rego, make, model, colour }));
     	}
     }
+
 
     async function addOwner(e) {
         e.preventDefault();
