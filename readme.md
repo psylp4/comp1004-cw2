@@ -4,13 +4,18 @@
   <h6 style="text-align: center">Student ID: 20547128</h6>
 </div>
 
-<h3>HTML</h3>
+### HTML
 - [index](index.html)
 - [search-vehicles](search-vehicles.html)
 - [add-vehicle](add-vehicle.html)
 
-<h3>CSS</h3>
+### CSS
 - [styles](styles.css)
 
-<h3>Javascript</h3>
+### Javascript
 - [script](script.js)
+
+### Accessibility Test
+<div align="center">
+  <img src="/img/lighthouse.png" height="400">
+</div>
