@@ -38,24 +38,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function addVehicle(e) {
-        e.preventDefault();
-        const ownerName = document.getElementById('owner').value.trim();
-        const ownerId = await getOwnerId(ownerName);
-        const rego = document.getElementById('rego').value.trim();
-        const make = document.getElementById('make').value.trim();
-        const model = document.getElementById('model').value.trim();
-        const colour = document.getElementById('colour').value.trim();
+    	e.preventDefault();
+    	const ownerName = document.getElementById('owner').value.trim();
+    	const rego = document.getElementById('rego').value.trim();
+    	const make = document.getElementById('make').value.trim();
+    	const model = document.getElementById('model').value.trim();
+    	const colour = document.getElementById('colour').value.trim();
 
-        if (ownerId) {
-            await insertVehicle(ownerId, rego, make, model, colour);
-        } else {
-            document.getElementById('add-owner-form').style.display = 'none';
-            updateMessage('Owner does not exist. Please add the owner.');
-            sessionStorage.setItem('vehicleDetails', JSON.stringify({ rego, make, model, colour }));
-        }
-
-        await insertVehicle(ownerId, rego, make, model, colour);
+    	const ownerId = await getOwnerId(ownerName);
+    	if (ownerId) {
+        	await insertVehicle(ownerId, rego, make, model, colour);
+    	} else {
+        	document.getElementById('add-owner-form').style.display = 'block';
+        	updateMessage('Owner does not exist. Please add the owner.');
+        	sessionStorage.setItem('vehicleDetails', JSON.stringify({ rego, make, model, colour }));
+    	}
     }
+
 
     async function addOwner(e) {
         e.preventDefault();
