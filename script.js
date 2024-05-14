@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
         	await insertVehicle(ownerId, rego, make, model, colour);
     	} else {
         	document.getElementById('add-owner-form').style.display = 'block';
-		addOwnerForm.style.display = 'block';
         	updateMessage('Owner does not exist. Please add the owner.');
         	sessionStorage.setItem('vehicleDetails', JSON.stringify({ rego, make, model, colour }));
     	}
