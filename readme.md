@@ -17,5 +17,5 @@
 
 ### Accessibility Test
 <div align="center">
-  <img src="lighthouse.png" height="100">
+  <img src="lighthouse.png" height="400">
 </div>
