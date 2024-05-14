@@ -36,9 +36,6 @@ aside {
 main {
   grid-column: 2; /* Main content on the right */
   grid-row: 2; /* Below the header */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Each box takes a minimum of 300px width */
-  grid-gap: 20px; /* Gap between boxes */
 }
 
 footer {
@@ -64,4 +61,19 @@ footer {
   footer {
     grid-row: 4; /* Footer at the bottom */
   }
+}
+
+/* CSS Flexbox for horizontal layout of result boxes */
+#results {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next row */
+  justify-content: flex-start; /* Start from left */
+}
+
+.result-box {
+  border: 1px solid black;
+  margin: 5px; /* Adjust margin between result boxes */
+  padding: 10px;
+  width: 200px; /* Adjust width as needed */
+  box-sizing: border-box; /* Include border and padding in width calculation */
 }
