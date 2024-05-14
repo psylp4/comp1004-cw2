@@ -1,5 +1,5 @@
-<div align="center>
-  <h1 style="text-align: center">COMP1004 Coursework 2</h1>
+### COMP1004 Coursework 2
+<div>
   <h6>Name: Lucas Panjaitan</h6>
   <h6>Student ID: 20547128</h6>
 </div>
