@@ -17,5 +17,5 @@
 
 <div align="center>
   <h6>Accessibility Test</h6>
-  <img src="../img/lighthouse.png">
+  <img src="../img/lighthouse.png" height="400>
 </div>
