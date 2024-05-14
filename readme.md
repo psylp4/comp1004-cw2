@@ -19,3 +19,5 @@
 <div align="center">
   <img src="lighthouse.png" height="600">
 </div>
+
+- Note: no additional work attempted.
