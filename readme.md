@@ -4,13 +4,13 @@
   <h4>Student ID: 20547128</h4>
 </div>
 
-<h6>HTML</h6>
+<h5>HTML</h5>
 - [index](index.html)
 - [search-vehicles](search-vehicles.html)
 - [add-vehicle](add-vehicle.html)
 
-<h6>CSS</h6>
+<h5>CSS</h5>
 - [styles](styles.css)
 
-<h6>Javascript</h6>
+<h5>Javascript</h5>
 - [script](script.js)
