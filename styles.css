@@ -36,6 +36,9 @@ aside {
 main {
   grid-column: 2; /* Main content on the right */
   grid-row: 2; /* Below the header */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Each box takes a minimum of 300px width */
+  grid-gap: 20px; /* Gap between boxes */
 }
 
 footer {
