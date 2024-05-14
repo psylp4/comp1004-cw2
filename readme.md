@@ -1,21 +1,16 @@
 ### COMP1004 Coursework 2
 <div>
-  <h6>Name: Lucas Panjaitan</h6>
-  <h6>Student ID: 20547128</h6>
+  <h4>Name: Lucas Panjaitan</h4>
+  <h4>Student ID: 20547128</h4>
 </div>
 
-### HTML
+<h6>HTML</h6>
 - [index](index.html)
 - [search-vehicles](search-vehicles.html)
 - [add-vehicle](add-vehicle.html)
 
-### CSS
+<h6>CSS</h6>
 - [styles](styles.css)
 
-### Javascript
+<h6>Javascript</h6>
 - [script](script.js)
-
-<div align="center>
-  <h6>Accessibility Test</h6>
-  <img src="../img/lighthouse.png" height="400>
-</div>
