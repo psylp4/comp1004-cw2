@@ -74,6 +74,6 @@ footer {
   border: 1px solid black;
   margin: 5px; /* Adjust margin between result boxes */
   padding: 10px;
-  width: 200px; /* Adjust width as needed */
+  width: 300px; /* Adjust width as needed */
   box-sizing: border-box; /* Include border and padding in width calculation */
 }
